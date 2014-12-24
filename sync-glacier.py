@@ -9,7 +9,6 @@ import time
 
 access_key_id = ""
 secret_key = ""
-region = ""
 
 # Outputs the config file
 def write():
