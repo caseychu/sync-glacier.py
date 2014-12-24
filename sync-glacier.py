@@ -9,6 +9,7 @@ import time
 
 access_key_id = ""
 secret_key = ""
+region = ""
 
 # Outputs the config file
 def write():
@@ -82,7 +83,7 @@ for dir in dirs:
 
 # Cool! Let's set up everything.
 connect_to_region(vault_info[1], aws_access_key_id=access_key_id, aws_secret_access_key=secret_key)
-glacier = Layer2(aws_access_key_id=access_key_id, aws_secret_access_key=secret_key)
+glacier = Layer2(aws_access_key_id=access_key_id, aws_secret_access_key=secret_key, region_name=region)
 vault = glacier.get_vault(vault_name)
 print "Beginning job on " + vault.arn
 
